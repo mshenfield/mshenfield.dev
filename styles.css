@@ -54,27 +54,6 @@
   transform-origin: top right;
   transform: scale(0.98);
 }
-
-.overlay > .hi .rooted {
-  /* Allow children to be positioned relative to it */
-  position: relative;
-  /*
-   * Establish a new stacking context, but keep this element at the
-   * default 0 level within its parent.
-   */
-  z-index: 0;
-}
-.overlay > .hi .rooted:before {
-  content: "🌳";
-  font-size: 2ex;
-  position: absolute;
-  text-align: center;
-  top: .5ex;
-  /* 100% of the parent text node "rooted" */
-  width: 100%;
-  /* Scooch behind the text */
-  z-index: -1;
-}
 .overlay > .hi > h1 {
   text-align: left;
 }
