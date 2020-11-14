@@ -16,12 +16,21 @@
   <!-- TODO: Better site name. max.codes, max.rocks, max.charmer -->
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+  function hideHi() {
+    const hi = document.querySelector(".hi");
+    // Triggers a 1000ms fade.
+    hi.style.opacity = 0;
+    // After the element is invisible, remove it from the flow completely.
+    setTimeout(() => hi.style.display = "none", 1000);
+  }
+  </script> 
 </head>
 
 <div class="overlay">
   <section class="hi">
     <h1>Hi ✋🏻, I'm Max</h1>
     <p>I'm a top notch web developer and service creator, <span class="rooted">rooted</span> in Seattle, WA.</p>
-    <button class="exit" aria-label="Close">x</button>
+    <button onclick="hideHi()" class="exit" aria-label="Close">x</button>
   </section>
 </div>

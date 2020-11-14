@@ -3,6 +3,7 @@
   --background-color: indigo;
   --darker-background-color: #300153;
 }
+
 /* Center the content within the overlay */
 .overlay {
   --border-width: 5px;
@@ -22,6 +23,8 @@
   padding: 40px;
   /* Allow absolute position of X button */
   position: relative;
+  /* Support fading out */
+  transition: opacity 1000ms ease-in-out;
   width: 40%;
 }
 /* TODO: Factor out flex-centered into a CSS utility here and above */
@@ -80,7 +83,12 @@
   padding-top: 25px;
 }
 
-/* Remove all styling from buttons */
+/*
+ * Remove all styling from buttons
+ *
+ * Copied from https://css-tricks.com/overriding-default-button-styles/
+ * 
+ */
 button {
   -moz-appearance: none;
   -webkit-appearance: none;
