@@ -14,56 +14,14 @@
   }</script>
   <!-- TODO: Upload the image to somewhere I host it and use that -->
   <!-- TODO: Better site name. max.codes, max.rocks, max.charmer -->
-  <link rel="stylesheet" href="reset.css"/>
-  <style>
-    /* Center the content within the overlay */
-    .overlay {
-      align-items: center;
-      background-color: indigo;
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      width: 100%;
-    }
-    .overlay > .hi {
-      border: white dashed 5px;
-      color: white;
-      font-family: sans-serif;
-      font-size: large;
-      padding: 40px;
-      /* Allow absolute position of X button */
-      position: relative;
-      width: 40%;
-    }
-    /* TODO: Factor out flex-centered into a CSS utility here and above */
-    .overlay > .hi > .exit {
-      align-items: center;
-      display: flex;
-      height: 40px;
-      justify-content: center;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      width: 40px;
-    }
-    .overlay > .hi > h1 {
-      text-align: left;
-    }
-    /* TODO: Think more about this padding and sizing */
-    .overlay > .hi > p {
-      padding-top: 25px;
-    }
-
-    h1 {
-      font-size: 175%;
-    }
-  </style>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <div class="overlay">
   <section class="hi">
     <h1>Hi ✋🏻, I'm Max</h1>
-    <p>I'm a top notch, whimsical web developer and service creator, rooted in Seattle, WA.</p>
-    <span class="exit">x</span>
+    <p>I'm a top notch web developer and service creator, <span class="rooted">rooted</span> in Seattle, WA.</p>
+    <button class="exit" aria-label="Close">x</button>
   </section>
 </div>
