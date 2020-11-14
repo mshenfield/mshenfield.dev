@@ -1,13 +1,13 @@
 :root {
-  --accent-color: forestgreen;
   --background-color: indigo;
   --darker-background-color: #300153;
 }
 
 /* Center the content within the overlay */
 .overlay {
+  --border-color: white;
   --border-width: 5px;
-  --border-style: white dashed var(--border-width);
+  --border-style: var(--border-color) dashed var(--border-width);
   align-items: center;
   background-color: var(--background-color);
   display: flex;
@@ -45,9 +45,6 @@
 .overlay > .hi > .exit:hover,
 .overlay > .hi > .exit:focus {
   background-color: var(--darker-background-color);
-}
-.overlay > .hi > .exit:focus {
-  border-color: var(--accent-color);
 }
 .overlay > .hi > .exit:active {
   /* Shrink the button a bit to make it look like it is pressed */
