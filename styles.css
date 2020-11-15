@@ -1,85 +1,120 @@
 :root {
-  --background-color: indigo;
-  --darker-background-color: #300153;
+  --moondust: #999;
+  --midnight-blue: #001;
+  --starlight: #eeb;
+  --sunlight: #bb4;
 }
 
-/* Center the content within the overlay */
-.overlay {
-  --border-color: white;
-  --border-width: 5px;
-  --border-style: var(--border-color) dashed var(--border-width);
+* {
+  box-sizing: border-box;
+}
+
+.content {
   align-items: center;
-  background-color: var(--background-color);
   display: flex;
+  justify-content: flex-start; 
   height: 100%;
-  justify-content: center;
+  padding: 1em;
   width: 100%;
 }
-.overlay > .hi {
-  border: var(--border-style);
-  color: white;
-  font-family: sans-serif;
-  font-size: large;
-  padding: 40px;
-  /* Allow absolute position of X button */
-  position: relative;
-  /* Support fading out */
-  transition: opacity 1000ms ease-in-out;
-  width: 40%;
-}
-/* TODO: Factor out flex-centered into a CSS utility here and above */
-.overlay > .hi > .exit {
-  --size: 40px;
-  align-items: center;
-  /* Extend the border of the dialog */
-  border: var(--border-style);
-  display: flex;
-  height: var(--size);
-  justify-content: center;
-  position: absolute;
-  /* Push back so the border overlaps with the container's borders */
-  right: calc(-1 * var(--border-width));
-  top: calc(-1 * var(--border-width));
-  width: var(--size);
-}
-.overlay > .hi > .exit:hover,
-.overlay > .hi > .exit:focus {
-  background-color: var(--darker-background-color);
-}
-.overlay > .hi > .exit:active {
-  /* Shrink the button a bit to make it look like it is pressed */
-  transform-origin: top right;
-  transform: scale(0.98);
-}
-.overlay > .hi > h1 {
-  text-align: left;
-}
-/* TODO: Think more about this padding and sizing */
-.overlay > .hi > p {
-  padding-top: 25px;
+
+.hi {
+  border: solid var(--starlight) .25em;
+  max-width: 20%;
+  padding: 1em;
 }
 
-/*
- * Remove all styling from buttons
- *
- * Copied from https://css-tricks.com/overriding-default-button-styles/
- * 
- */
-button {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  background: transparent;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  display: inline-block;
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+.moon {
+  --size: 5em;
+  background-color: var(--starlight);
+  border-radius: 50%;
+  height: var(--size);
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: var(--size);
+}
+
+.moon > .moon-mask {
+  background-color: var(--midnight-blue);
+  border-radius: 50%;
+  height: var(--size);
+  opacity: .98;
+  position: absolute;
+  right: 1.5em;
+  bottom: .1em;
+  width: var(--size); 
+}
+
+.moon .dot1 {
+  --dotsize: .5em;
+  background-color: var(--moondust);
+  border-radius: 50%;
+  height: var(--dotsize);
+  opacity: .5;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  width: var(--dotsize);
+}
+
+.moon .dot2 {
+  --dotsize: 1em;
+  background-color: var(--moondust);
+  border-radius: 50%;
+  bottom: 10%;
+  height: var(--dotsize);
+  opacity: .5;
+  position: absolute;
+  left: 15%;
+  width: var(--dotsize);
+}
+
+.moon .dot3 {
+  --dotsize: .7em;
+  background-color: var(--moondust);
+  border-radius: 50%;
+  height: var(--dotsize);
+  opacity: .5;
+  position: absolute;
+  right: 20%;
+  top: 15%;
+  width: var(--dotsize);
+}
+
+.star {
+  color: var(--starlight);
+  position: absolute;
+}
+.star:before {
+  content: "*";
+}
+.star.star1 {
+  top: 3em;
+  left: 50%;
+}
+.star.star2 {
+  top: 5em;
+  left: 20%;
+}
+.star.star3 {
+  top: 13em;
+  left: 78%;
+}
+
+body {
+  background-color: var(--midnight-blue);
+  color: var(--starlight);
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
 }
 
 h1 {
-  font-size: 175%;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+strong {
+  color: var(--sunlight);
+  font-weight: bold;
 }

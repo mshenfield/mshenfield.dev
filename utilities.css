@@ -1,0 +1,7 @@
+/* Centers any content vertically and horizontally within the container */
+.content-centered {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}

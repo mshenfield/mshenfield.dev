@@ -15,22 +15,24 @@
   <!-- TODO: Upload the image to somewhere I host it and use that -->
   <!-- TODO: Better site name. max.codes, max.rocks, max.charmer -->
   <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="utilities.css"/>
   <link rel="stylesheet" href="styles.css" />
-  <script>
-  function hideHi() {
-    const hi = document.querySelector(".hi");
-    // Triggers a 1000ms fade.
-    hi.style.opacity = 0;
-    // After the element is invisible, remove it from the flow completely.
-    setTimeout(() => hi.style.display = "none", 1000);
-  }
-  </script> 
 </head>
 
-<div class="overlay">
+<div class="content">
   <section class="hi">
     <h1>Hi ✋🏻, I'm Max</h1>
-    <p>I'm a top notch web developer and service creator, rooted in Seattle, WA.</p>
-    <button onclick="hideHi()" class="exit" aria-label="Close">x</button>
+    <p>I create <strong>useful</strong>, unintrusive services with <strong>simple</strong> code.</p>
   </section>
 </div>
+
+<div class="moon">
+  <div class="dot1"></div>
+  <div class="dot2"></div>
+  <div class="dot3"></div>
+  <div class="moon-mask"></div>
+</div>
+
+<div class="star star1"></div>
+<div class="star star2"></div>
+<div class="star star3"></div>
