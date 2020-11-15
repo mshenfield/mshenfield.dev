@@ -11,10 +11,44 @@
 
 .hi {
   border: solid var(--starlight) .25em;
-  max-width: 11em;
+  /* Big enough to fit the header on one line */
+  max-width: 15em;
   padding: 1em;
   /* Make sure it covers the moon if they overlap */
   z-index: 1;
+}
+
+/* A deliberate sprightly spin, and then a wave */
+@keyframes wave {
+  from {
+    transform: rotate(0turn);
+  }
+  15% {
+    transform: rotate(1turn);
+  }
+  30% {
+    transform: rotate(1.07turn);
+  }
+  55% {
+    transform: rotate(.93turn);
+  }
+  80% {
+    transform: rotate(1.06turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.hi .hand {
+  /* To enable rotating and moving about */
+  display: inline-block;
+  position: relative;
+}
+
+.hi .hand:hover {
+  /* Let them say hi back */
+  cursor: grab;
+  animation: wave 2s linear;
 }
 
 .moon {
