@@ -1,5 +1,22 @@
 <html lang="en-US">
 <head>
+  <meta charset="utf-8" />
+
+  <title>Max Shenfield's Home Page</title>
+  
+  <!-- TODO: <link rel="canonical" href="https://maxshenfield.com" /> when launched -->
+  <link rel="icon" href="favicon.png" sizes="32x32"/>
+  <link rel="apple-touch-icon" href="favicon.png" sizes="32x32"/>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="utilities.css"/>
+  <link rel="stylesheet" href="styles.css" />
+
+  <meta name="description" content="I'm a software engineer in Seattle, WA, working on backend services for Google Domains"/>
+  <!-- TODO: <meta http-equiv="content-security-policy" content="default-src 'self'" /> when launched -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- TODO: Grab this and the CSS variable midnight-blue from the same source -->
+  <meta name="theme-color" content="#00001F" />
+ 
   <script type="application/ld+json">{
     "@context": "http://schema.org",
     "@type": "Person",
@@ -14,14 +31,8 @@
     "url": "https://mshenfield.dev"
   }</script>
   <!-- TODO: Upload the image to somewhere I host it and use that -->
-  <!-- TODO: Better site name. max.codes, max.rocks, max.charmer -->
-  <meta charset="utf-8" />
-  <link rel="canonical" href="https://maxshenfield.com" />
-  <link rel="icon" href="favicon.png" sizes="32x32"/>
-  <link rel="apple-touch-icon" href="favicon.png" sizes="32x32"/>
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="utilities.css"/>
-  <link rel="stylesheet" href="styles.css" />
+  <!-- TODO: Update site name -->
+  <script src="index.js"></script>
 </head>
 <body>
   <header>
@@ -35,8 +46,12 @@
   </header>
   <main>
     <section class="hi">
-      <h1>Hi <span class="hand">✋🏻</span>, I'm Max</h1>
-      <p>I create <strong>useful</strong>, unintrusive services with <strong>simple</strong> code.</p>
+      <!-- Make the hand tabbable so tabbers get the easter egg as well -->
+      <h1>Hi <span tabindex=0 class="hand">✋🏻</span>, I'm Max</h1>
+      <p>
+      I'm a software engineer that values <strong>simplicity</strong>, <strong>equity</strong>, and <strong>end users</strong>.
+      Right now I'm working on backend services for <a href="https://domains.google">Google Domains</a>.
+      </p>
     </section>
     <!-- These absolutely positioned elements are not part of the flex flow. -->
     <div class="moon">

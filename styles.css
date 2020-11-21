@@ -45,9 +45,8 @@
   position: relative;
 }
 
-.hi .hand:hover {
-  /* Let them say hi back */
-  cursor: grab;
+.hi .hand:hover,
+.hi .hand:focus {
   animation: wave 2s linear;
 }
 
@@ -69,7 +68,7 @@
   opacity: .98;
   position: absolute;
   right: 1.5em;
-  bottom: .1em;
+  bottom: .07em;
   width: var(--size);
 }
 
@@ -135,6 +134,9 @@ a {
 }
 a:hover, a:focus {
   text-decoration: underline;
+}
+main a {
+  font-style: italic;
 }
 
 body {
