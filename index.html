@@ -67,5 +67,15 @@
     <div class="star star3"></div>
     <!-- end of absolutely positioned elements -->
   </main>
+  <footer>
+    <label class="mute-label">
+      <input id="mute-button" type="checkbox" checked="true"/>
+      <span></span>
+    </label>
+    <!-- Looping is handled in JS to avoid gap between loops -->
+    <audio id="background-audio" autoplay="true" muted="true">
+      <source src="night.mp3" type="audio/mpeg" />
+    </audio>
+  </footer>
 </body>
 </html>

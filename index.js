@@ -16,4 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const moonMask = document.querySelector(".moon-mask");
   const size = window.parseInt(window.getComputedStyle(moonMask).getPropertyValue("--size"));
   moonMask.style.right = `${size * proportion}em`;
+
+  const audio = document.querySelector("#background-audio");
+  const muteButton = document.querySelector("#mute-button");
+  // Force initial muted state - Firefox remembers checkbox state otherwise
+  muteButton.checked = true;
+  muteButton.addEventListener("input", inputEvent => {
+    inputEvent.preventDefault();
+    audio.muted = inputEvent.target.checked;
+  });
+  // Using the <audio> "loop" attribute results in a conspicuous gap between
+  // loops. To make the background noise as unobtrusive as possible, extra
+  // massaging to do a gap-less loop.
+  audio.addEventListener("timeupdate", () => {
+    const proportionPlayed = audio.currentTime / audio.duration;
+    if (proportionPlayed > .95) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  });
 });
