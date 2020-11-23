@@ -4,6 +4,7 @@
   --starlight: #eeb;
   --starlight-dark: #24241a;
   --sunlight: #bb4;
+  --main-padding: 3rem;
 }
 
 * {
@@ -11,10 +12,8 @@
 }
 
 .hi {
-  border: solid var(--starlight) .25em;
   /* Big enough to fit the header on one line */
   max-width: 15em;
-  padding: 1em;
   /* Make sure it covers the moon if they overlap */
   z-index: 1;
 }
@@ -57,8 +56,8 @@
   border-radius: 50%;
   height: var(--size);
   position: absolute;
-  right: 1em;
-  top: 1em;
+  right: var(--main-padding);
+  top: var(--main-padding);
   width: var(--size);
 }
 
@@ -68,7 +67,8 @@
   height: var(--size);
   opacity: .98;
   position: absolute;
-  right: 1.5em;
+  /* We modify this property via JS, but include a default value as a fallback */
+  right: var(--main-padding);
   bottom: .07em;
   width: var(--size);
 }
@@ -162,7 +162,7 @@
 .owl-sprite {
   position: absolute;
   right: -10%;
-  top: 5%;
+  top: var(--main-padding);
   /* TODO: This should be calculated based on the view width so it's a consistent speed */
   animation: cross 10s ease-in-out;
   /* The first owl screech is exactly at 5s */
@@ -231,12 +231,12 @@ body {
 footer {
   display: flex;
   justify-content: flex-end;
-  padding: 1em;
+  padding: 1rem;
 }
 
 h1 {
   font-size: 2em;
-  margin-bottom: 1em;
+  margin-bottom: .5rem;
 }
 
 header {
@@ -244,7 +244,7 @@ header {
   border-bottom: var(--starlight-dark) solid .1em;
   display: flex;
   justify-content: flex-end;
-  padding: 1em;
+  padding: 1rem;
 }
 
 main {
@@ -253,7 +253,7 @@ main {
   flex-grow: 1;
   justify-content: flex-start;
   height: 100%;
-  padding: 1em;
+  padding: var(--main-padding);
   position: relative;
   width: 100%;
 }
