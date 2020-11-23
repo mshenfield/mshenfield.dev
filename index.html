@@ -5,11 +5,11 @@
   <title>Max Shenfield's Home Page</title>
   
   <!-- TODO: <link rel="canonical" href="https://maxshenfield.com" /> when launched -->
-  <link rel="icon" href="favicon.png" sizes="32x32"/>
-  <link rel="apple-touch-icon" href="favicon.png" sizes="32x32"/>
+  <link rel="icon" href="assets/favicon.png" sizes="32x32"/>
+  <link rel="apple-touch-icon" href="assets/favicon.png" sizes="32x32"/>
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="utilities.css"/>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
 
   <meta name="description" content="I'm a software engineer in Seattle, WA, working on backend services for Google Domains"/>
   <!-- TODO: <meta http-equiv="content-security-policy" content="default-src 'self'" /> when launched -->
@@ -65,6 +65,10 @@
     <div class="star star1"></div>
     <div class="star star2"></div>
     <div class="star star3"></div>
+    <div class="owl-sprite">
+      <img class="frame" src="assets/owl-up.svg" />
+      <img class="frame" src="assets/owl-down.svg" />
+    </div>
     <!-- end of absolutely positioned elements -->
   </main>
   <footer>
@@ -74,7 +78,7 @@
     </label>
     <!-- Looping is handled in JS to avoid gap between loops -->
     <audio id="background-audio" autoplay="true" muted="true">
-      <source src="night.mp3" type="audio/mpeg" />
+      <source src="assets/night.mp3" type="audio/mpeg" />
     </audio>
   </footer>
 </body>

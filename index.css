@@ -2,6 +2,7 @@
   --moondust: #999;
   --midnight-blue: #001;
   --starlight: #eeb;
+  --starlight-dark: #24241a;
   --sunlight: #bb4;
 }
 
@@ -149,6 +150,60 @@
   left: 78%;
 }
 
+@keyframes cross {
+  from {
+    right: -10%;
+  }
+
+  to {
+    right: 120%;
+  }
+}
+.owl-sprite {
+  position: absolute;
+  right: -10%;
+  top: 5%;
+  /* TODO: This should be calculated based on the view width so it's a consistent speed */
+  animation: cross 10s ease-in-out;
+  /* The first owl screech is exactly at 5s */
+  animation-delay: 3s;
+}
+.owl-sprite .frame {
+  --owl-size: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--owl-size);
+  width: var(--owl-size);
+}
+
+@keyframes blink1 {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes blink2 {
+  from {
+    visibility: hidden;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
+
+.owl-sprite .frame:nth-child(1) {
+  animation: blink1 .75s infinite steps(2, jump-none);
+  top: -37.5px;
+}
+.owl-sprite .frame:nth-child(2) {
+  animation: blink2 .75s infinite steps(2, jump-none);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -168,6 +223,8 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   height: 100%;
   line-height: 1.5;
+  /* Generally good practice, but specifically to allow hiding owl off screen */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -184,7 +241,7 @@ h1 {
 
 header {
   align-items: center;
-  border-bottom: var(--starlight) solid .1em;
+  border-bottom: var(--starlight-dark) solid .1em;
   display: flex;
   justify-content: flex-end;
   padding: 1em;
