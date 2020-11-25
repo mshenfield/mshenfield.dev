@@ -5,6 +5,7 @@
   --starlight-dark: #24241a;
   --sunlight: #bb4;
   --main-padding: 3rem;
+  --owl-size: 150px;
 }
 
 * {
@@ -150,26 +151,56 @@
   left: 78%;
 }
 
+/* Cross the screen at a consistent speed regardless of screen size
+ *
+ * Rather than travel a distance relative to the screen width, the cross
+ * is always 2000px (wayyyy  off to left field on small devices). This way
+ * crossing the screen is always at a consistent pixel/second speed. The cross
+ * can be sped up by decreasing the `animation-duration`, and slowed down by
+ * increasing the `animation-duration`.
+ *
+ * `calc` doesn't handle time values well, so we can't change the speed
+ * by calculating the `animation-duration` based on the view width.
+ */
 @keyframes cross {
   from {
-    right: -10%;
+    transform: translateX(var(--owl-size));
   }
 
   to {
-    right: 120%;
+    /* Choose a relatively large screen size as our constant so that most times it will be used.
+     * Include the viewport + the size of the owl as a fallback on gigantic screens
+     */
+    transform: translateX(-2000px);
+    /* -max(2000px, calc(100vw + var(--owl-size)), 2000px));*/
   }
+}
+
+/* Hiding it from within a nested div, instead of the body, avoids expanding the screen on mobile
+ *
+ * TODO: Specifying "overflow-y: visible" doesn't show owl. I have to make a div large enough to
+ * actually display the owl for it to appear.
+ */
+.owl-sprite-hider {
+  height: calc(var(--owl-size) + var(--main-padding));
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100vw;
 }
 .owl-sprite {
   position: absolute;
-  right: -10%;
+  right: 0;
   top: var(--main-padding);
-  /* TODO: This should be calculated based on the view width so it's a consistent speed */
-  animation: cross 10s ease-in-out;
-  /* The first owl screech is exactly at 5s */
-  animation-delay: 3s;
+  /* 2000px/13s = ~150px/second */
+  animation: cross 13s linear;
+  /* The first owl screech is exactly at around 5s.
+   * With the time it takes to enter the frame the owl shows up right when the screech happens.
+   */
+  animation-delay: 4s;
 }
 .owl-sprite .frame {
-  --owl-size: 150px;
   position: absolute;
   top: 0;
   left: 0;
