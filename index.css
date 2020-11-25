@@ -19,7 +19,7 @@
   z-index: 1;
 }
 
-/* A deliberate sprightly spin, and then a wave */
+/* A sprightly spin, and then a wave */
 @keyframes wave {
   from {
     transform: rotate(0turn);
@@ -41,7 +41,7 @@
   }
 }
 .hi .hand {
-  /* To enable rotating and moving about */
+  /* To enable rotating and wiggling about */
   display: inline-block;
   position: relative;
 }
@@ -124,10 +124,10 @@
   appearance: none;
   display: none;
 }
-#mute-button + span:before {
+#mute-button + .mute-button-icon:before {
   content: "🔊";
 }
-#mute-button:checked + span:before {
+#mute-button:checked + .mute-button-icon:before {
   content: "🔈";
 }
 
@@ -154,8 +154,8 @@
 /* Cross the screen at a consistent speed regardless of screen size
  *
  * Rather than travel a distance relative to the screen width, the cross
- * is always 2000px (wayyyy  off to left field on small devices). This way
- * crossing the screen is always at a consistent pixel/second speed. The cross
+ * is always 2000px (wayyyy  off to left field on small devices). For a given
+ * `animation-duration` this gives a consistent pixel/second speed. The cross
  * can be sped up by decreasing the `animation-duration`, and slowed down by
  * increasing the `animation-duration`.
  *
@@ -168,11 +168,8 @@
   }
 
   to {
-    /* Choose a relatively large screen size as our constant so that most times it will be used.
-     * Include the viewport + the size of the owl as a fallback on gigantic screens
-     */
+    /* Choose a relatively large screen size as our constant so it handles large screens well. */
     transform: translateX(-2000px);
-    /* -max(2000px, calc(100vw + var(--owl-size)), 2000px));*/
   }
 }
 
@@ -260,9 +257,15 @@ body {
 }
 
 footer {
+  align-items: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 1rem;
+}
+
+.credits {
+  font-size: smaller;
+  color: var(--starlight-dark);
 }
 
 h1 {
