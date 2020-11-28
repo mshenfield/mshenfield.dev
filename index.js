@@ -13,8 +13,10 @@ function fullnessOfMoon() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const proportion = fullnessOfMoon();
+  console.log(proportion);
   const moonMask = document.querySelector(".moon-mask");
-  const size = window.parseInt(window.getComputedStyle(moonMask).getPropertyValue("--size"));
+  const size = window.parseInt(window.getComputedStyle(moonMask).getPropertyValue("--moon-size"));
+  console.log(size * proportion);
   moonMask.style.right = `${size * proportion}em`;
 
   const audio = document.querySelector("#background-audio");

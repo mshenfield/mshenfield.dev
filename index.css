@@ -1,5 +1,6 @@
 :root {
   --moondust: #999;
+  --moon-size: 5em;
   --midnight-blue: #001;
   --starlight: #eeb;
   --starlight-dark: #24241a;
@@ -14,10 +15,12 @@
 
 .hi {
   /* Big enough to fit the header on one line */
-  max-width: 15em;
+  max-width: 30em;
   /* Make sure it covers the moon if they overlap */
   z-index: 1;
 }
+
+/* Spinning hand */
 
 /* A sprightly spin, and then a wave */
 @keyframes wave {
@@ -40,76 +43,40 @@
     transform: rotate(1turn);
   }
 }
-.hi .hand {
+.spinny-hand {
   /* To enable rotating and wiggling about */
   display: inline-block;
   position: relative;
 }
-
-.hi .hand:hover,
-.hi .hand:focus {
+.spinny-hand:hover,
+.spinny-hand:focus {
   animation: wave 2s linear;
 }
 
-.moon {
-  --size: 5em;
-  background-color: var(--starlight);
-  border-radius: 50%;
-  height: var(--size);
+/* Moon */
+.moon-container {
   position: absolute;
   right: var(--main-padding);
   top: var(--main-padding);
-  width: var(--size);
 }
-
-.moon > .moon-mask {
+.moon {
+  height: var(--moon-size);
+  width: var(--moon-size);
+}
+.moon-mask {
   background-color: var(--midnight-blue);
   border-radius: 50%;
-  height: var(--size);
+  height: var(--moon-size);
   opacity: .98;
   position: absolute;
   /* We modify this property via JS, but include a default value as a fallback */
   right: var(--main-padding);
+  /* Give the moon a bit of an offset so it's not a perfect crescent */
   bottom: .07em;
-  width: var(--size);
+  width: var(--moon-size);
 }
 
-.moon .dot1 {
-  --dotsize: .5em;
-  background-color: var(--moondust);
-  border-radius: 50%;
-  height: var(--dotsize);
-  opacity: .5;
-  position: absolute;
-  top: 35%;
-  left: 15%;
-  width: var(--dotsize);
-}
-
-.moon .dot2 {
-  --dotsize: 1em;
-  background-color: var(--moondust);
-  border-radius: 50%;
-  bottom: 10%;
-  height: var(--dotsize);
-  opacity: .5;
-  position: absolute;
-  left: 15%;
-  width: var(--dotsize);
-}
-
-.moon .dot3 {
-  --dotsize: .7em;
-  background-color: var(--moondust);
-  border-radius: 50%;
-  height: var(--dotsize);
-  opacity: .5;
-  position: absolute;
-  right: 20%;
-  top: 15%;
-  width: var(--dotsize);
-}
-
+/* Mute Toggle */
 .mute-label {
   align-items: center;
   background-color: #80000030;
@@ -240,7 +207,8 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 main a {
-  font-style: italic;
+  color: var(--sunlight);
+  font-style: bold;
 }
 
 body {
@@ -285,7 +253,7 @@ main {
   align-items: center;
   display: flex;
   flex-grow: 1;
-  justify-content: flex-start;
+  justify-content: center;
   height: 100%;
   padding: var(--main-padding);
   position: relative;
@@ -298,9 +266,4 @@ nav ul {
 nav ul li {
   padding-left: 1em;
   padding-right: 1em;
-}
-
-strong {
-  color: var(--sunlight);
-  font-weight: bold;
 }

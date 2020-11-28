@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="7px" viewBox="0 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final-Export" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stars" transform="translate(-117.000000, -78.000000)" fill="#FFF9E5">
+            <path d="M118,79 C119.075888,79.5556397 119.896316,79.8334595 120.461283,79.8334595 C121.02625,79.8334595 121.872489,79.5556397 123,79 C122.433458,79.8549242 122.150187,80.6957119 122.150187,81.522363 C122.150187,82.3490142 122.433458,83.1748932 123,84 C122.232842,83.4025078 121.422438,83.1037617 120.568788,83.1037617 C119.715138,83.1037617 118.858875,83.4025078 118,84 C118.58659,82.8342644 118.879884,81.9725504 118.879884,81.4148581 C118.879884,80.8571659 118.58659,80.0522132 118,79 Z" id="Rectangle" transform="translate(120.500000, 81.500000) rotate(45.000000) translate(-120.500000, -81.500000) "></path>
+        </g>
+    </g>
+</svg>

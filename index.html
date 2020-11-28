@@ -47,17 +47,15 @@
   <main>
     <section class="hi">
       <!-- Make the hand tabbable so tabbers get the easter egg as well -->
-      <h1>Hi <span tabindex=0 class="hand">✋🏻</span>, I'm Max</h1>
+      <h1>Hi <span tabindex=0 class="spinny-hand">✋🏻</span>, I'm Max</h1>
       <p>
-      I like making <strong>fun</strong>, <strong>useful</strong> things with <strong>simple</strong> code.
-      Right now I'm working on backend services for <a href="https://domains.google">Google Domains</a>.
+      I make useful, fun web apps and the services that power them.
+      Right now I work on <a href="https://domains.google">Google Domains</a>.
       </p>
     </section>
     <!-- These absolutely positioned elements are not part of the flex flow. -->
-    <div class="moon">
-      <div class="dot1"></div>
-      <div class="dot2"></div>
-      <div class="dot3"></div>
+    <div class="moon-container">
+      <img class="moon" src="assets/moon.svg" />
       <!-- Place the mask last to cover the previous parts -->
       <div class="moon-mask"></div>
     </div>
@@ -75,7 +73,7 @@
   </main>
   <footer>
     <div class="credits">
-      Owl by <a href="https://www.linkedin.com/in/aprilnpetry">April Petry</a>
+      Art by <a href="https://www.linkedin.com/in/aprilnpetry">April Petry</a>
     </div>
     <label class="mute-label">
       <input id="mute-button" type="checkbox" checked="true"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Final-Export" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stars" transform="translate(-141.000000, -76.000000)">
+            <g id="Group-6" transform="translate(141.000000, 76.000000)">
+                <polygon id="Rectangle" fill="#FFFFFF" transform="translate(6.000000, 6.000000) rotate(90.000000) translate(-6.000000, -6.000000) " points="-1.29594885e-11 6.82995327e-13 5.98603657 3.54430126 12 6.82995327e-13 8.51939192 6.07765661 12 12 6.14729392 8.44975461 -1.29594885e-11 12 3.61393857 5.91639926"></polygon>
+                <path d="M3,2.94561364 C3.95508903,3.61238122 4.93960223,3.94576501 5.95353962,3.94576501 C6.96747701,3.94576501 7.98296381,3.61238122 9,2.94561364 C8.32014927,3.97152268 7.9802239,4.9804679 7.9802239,5.97244929 C7.9802239,6.96443069 8.32014927,7.95548547 9,8.94561364 C8.07941013,8.22862301 7.1069253,7.8701277 6.0825455,7.8701277 C5.0581657,7.8701277 4.03065054,8.22862301 3,8.94561364 C3.70390748,7.84720055 4.05586122,6.81314381 4.05586122,5.84344342 C4.05586122,4.87374302 3.70390748,3.90779976 3,2.94561364 Z" id="Rectangle" fill="#FFF9E5" transform="translate(6.000000, 5.945614) rotate(45.000000) translate(-6.000000, -5.945614) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
