@@ -214,6 +214,12 @@ main a {
   font-style: bold;
 }
 
+/* Icons */
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 body {
   background-color: var(--midnight-blue);
   color: var(--starlight);
@@ -232,6 +238,16 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+}
+
+.left-footer {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.left-footer > * {
+  margin-right: 1em;
 }
 
 .credits {
