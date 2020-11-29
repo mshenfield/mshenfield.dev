@@ -2,7 +2,7 @@
   --moondust: #999;
   --moon-size: 5em;
   --midnight-blue: #001;
-  --starlight: #eeb;
+  --starlight: #b0ac9e;
   --starlight-dark: #24241a;
   --sunlight: #bb4;
   --main-padding: 3rem;
@@ -53,7 +53,9 @@
   animation: wave 2s linear;
 }
 
-/* Moon */
+/* My moon, my stars! */
+
+/* My moon */
 .moon-container {
   position: absolute;
   right: var(--main-padding);
@@ -76,6 +78,27 @@
   width: var(--moon-size);
 }
 
+/* My stars */
+
+/* Provide a conveniently hidden container for the stars */
+.star-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.star {
+  color: var(--starlight);
+  position: absolute;
+  height: .5rem;
+  width: .5rem;
+  background-image: url("assets/star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Mute Toggle */
 .mute-label {
   align-items: center;
@@ -96,26 +119,6 @@
 }
 #mute-button:checked + .mute-button-icon:before {
   content: "🔈";
-}
-
-.star {
-  color: var(--starlight);
-  position: absolute;
-}
-.star:before {
-  content: "*";
-}
-.star.star1 {
-  top: 3em;
-  left: 50%;
-}
-.star.star2 {
-  top: 1em;
-  left: 5%;
-}
-.star.star3 {
-  top: 13em;
-  left: 78%;
 }
 
 /* Cross the screen at a consistent speed regardless of screen size
