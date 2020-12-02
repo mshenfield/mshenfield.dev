@@ -1,0 +1,164 @@
+:root {
+  --moondust: #999;
+  --moon-size: 5em;
+  --midnight-blue: #001;
+  --starlight: #b0ac9e;
+  --starlight-dark: #24241a;
+  --sunlight: #bb4;
+  --main-padding: 3rem;
+  --owl-size: 150px;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(https://fonts.gstatic.com/s/oswald/v35/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* General stuff */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-color: var(--midnight-blue);
+  color: var(--starlight);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Oswald', sans-serif;
+  height: 100%;
+  line-height: 1.5;
+  /* Generally good practice, but specifically to allow hiding owl off screen */
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* My moon, my stars! */
+
+/* Provide a conveniently hidden container for the stars */
+.star-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.star {
+  color: var(--starlight);
+  position: absolute;
+  height: .5rem;
+  width: .5rem;
+  background-image: url("assets/star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* My moon */
+.moon-container {
+  position: absolute;
+  right: var(--main-padding);
+  top: var(--main-padding);
+}
+.moon {
+  height: var(--moon-size);
+  width: var(--moon-size);
+}
+.moon-mask {
+  background-color: var(--midnight-blue);
+  border-radius: 50%;
+  height: var(--moon-size);
+  opacity: .98;
+  position: absolute;
+  /* We modify this property via JS, but include a default value as a fallback */
+  right: var(--main-padding);
+  /* Give the moon a bit of an offset so it's not a perfect crescent */
+  bottom: .07em;
+  width: var(--moon-size);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: .5rem;
+}
+
+/* Header */
+header {
+  align-items: center;
+  border-bottom: var(--starlight-dark) solid .1em;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* Main content */
+main {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  height: 100%;
+  padding: var(--main-padding);
+  position: relative;
+  width: 100%;
+}
+main a {
+  color: var(--sunlight);
+  font-style: bold;
+}
+
+/* Footer */
+footer {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.left-footer {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+.left-footer > * {
+  margin-right: 1em;
+}
+
+.credits {
+  font-size: smaller;
+  color: var(--starlight-dark);
+}
+
+.socials a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,39 @@
+.nothing-here {
+  text-align: center;
+}
+.night-fox-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+.night-fox {
+  height: 200px;
+  /* Pull the fox left, so that it's body is more centered. The tail pushes the center to the left of the foxes body otherwise */
+  margin-left: -40px;
+}
+
+@keyframes night-fox-blink {
+  from {
+    visibility: visible;
+  }
+
+  to {
+    visibility: hidden;
+  }
+}
+
+.night-fox-eye {
+  /* About a 1/4 second of a blink at the end */
+  animation: night-fox-blink 10s steps(8, jump-none) infinite;
+}
+
+.star-container {
+  /* Push up so our fox isn't in the sky */
+  margin-top: -25%;
+}
