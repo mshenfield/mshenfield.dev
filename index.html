@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Max Shenfield's Home Page</title>
-  <!-- TODO: <link rel="canonical" href="https://maxshenfield.com" /> when launched -->
+  <link rel="canonical" href="https://mshenfield.dev" />
   <link rel="icon" href="assets/favicon.png" sizes="32x32"/>
   <link rel="apple-touch-icon" href="assets/favicon.png" sizes="32x32"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -29,8 +29,6 @@
     "image": "https://avatars3.githubusercontent.com/u/4812055?s=400&u=7eea9c0657589e4a12592e29e07dc8c6b9a28697"
     "url": "https://mshenfield.dev"
   }</script>
-  <!-- TODO: Upload the image to somewhere I host it and use that -->
-  <!-- TODO: Update site name -->
   <script src="index.js"></script>
 </head>
 <body>
@@ -187,14 +185,17 @@
       </div>
       <div class="credits">Art by <a href="https://www.linkedin.com/in/aprilnpetry">April Petry</a></div>
     </div>
-    <label class="mute-label">
-      <input id="mute-button" type="checkbox" checked="true"/>
-      <span class="mute-button-icon"></span>
-      <!-- Looping is handled in JS to avoid gap between loops -->
-      <audio id="background-audio" autoplay="true" muted="true">
-        <source src="assets/night.mp3" type="audio/mpeg" />
-      </audio>
-    </label>
+    <div class="sound-toggle">
+      <div class="credits">Sullivan NFC Station / Macaulay Library at the Cornell Lab (<a href="https://macaulaylibrary.org/asset/254021521">ML254021521</a>)</div>
+      <label class="sound-toggle-label">
+        <input id="sound-toggle-button" type="checkbox" checked="true"/>
+        <span class="sound-toggle-icon"></span>
+        <!-- Looping is handled in JS to avoid gap between loops -->
+        <audio id="background-audio" autoplay="true" muted="true">
+          <source src="assets/night.mp3" type="audio/mpeg" />
+        </audio>
+      </label>
+    </div>
   </footer>
 </body>
 </html>

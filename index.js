@@ -54,10 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
   var isPlaying = false;
   audio.addEventListener("play", () => isPlaying = true);
 
-  const muteButton = document.querySelector("#mute-button");
+  const soundToggleButton = document.querySelector("#sound-toggle-button");
   // Force initial muted state - Firefox remembers checkbox state otherwise
-  muteButton.checked = true;
-  muteButton.addEventListener("input", inputEvent => {
+  soundToggleButton.checked = true;
+  soundToggleButton.addEventListener("input", inputEvent => {
     inputEvent.preventDefault();
     audio.muted = inputEvent.target.checked;
     // Manually play if not already.
