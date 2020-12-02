@@ -14,4 +14,4 @@ the browser's cache is still in the works.
 🏗️ <span style="color: red; backround-color: yellow;">UNDER CONSTRUCTION</span>
 
 ## License
-[MIT](https://opensource.org/licenses/MIT).  Feel free to copy pieces, just don't copy the whole thing and slap you're name on it pretty please.
+[MIT](LICENSE).  Feel free to copy pieces, just don't copy the whole thing and slap you're name on it pretty please.
